@@ -1,0 +1,102 @@
+
+<body>
+  <script [src] = "checkoutUrl"></script>
+  <div align="center">
+    <h1> Tamil Cultural Association, IIT Bombay</h1>
+  </div>
+
+  <div align="center">
+    <h2> Tamil Fest 2022 - Tickets</h2>
+  </div>
+
+
+  <div class="form-style-5">
+    <form>
+      <fieldset>
+        <div align="center">
+          <h2>Student Subscription Mode</h2>
+          <p>Since you have chosen the subscription model u get one entry pass. If you wish to get any additional entry
+            passes, you can get them now by paying Rs.310/- per person </p>
+
+          <br>
+        </div>
+
+        <p><b>Subscription Fee is Rs.600 </b></p>
+
+        <div class="form-style-5">
+          <form [formGroup]="form">
+            <fieldset>
+              <p>Contribution if Any Please</p>
+              <input type="text" formControlName="contribution" (change)="trigger_total()" name="contribution"
+                id="contribution" placeholder="Contribution (if any)">
+              <p>Additional Passes</p>
+              <input type="text" formControlName="additionalpasses" (change)="trigger_total()" name="additionalpasses"
+                id="additionalpasses" placeholder="Additional Passes">
+
+              <h3>Total Amount: {{total}}</h3>
+              <!-- <input type="text" formControlName="totalpayableamount" name="totalpayableamount" id = "totalpayableamount" placeholder = "Total Payable Amount"> -->
+
+              <!-- <p><b>Slot Availability</b></p> 
+            <label class="container">Subscription Mode
+              <input type="radio" name="radio" formControlName="slot" value="subscribe" id = "subscriptionmode" > 
+              <br>
+              <body>(By paying for Rs.600/- with Subscription mode, you will get free entry pass for Tamil Fest 2022, Freshers Day 2022, Karthigai Deepam 2022 and Pongal Celebration 2023)</body>
+              <span class="checkmark"></span>
+            </label>
+          
+            <label class="container">Only for Tamil Fest 2022
+              <input type="radio" name="radio" formControlName="slot" value="event" id="onlytamilfest" >
+              <br>
+              <body>(Rs.310/- per person, which includes entry to the Cultural Event, Dinner and Movie Screening)</body>
+              <span class="checkmark"></span>
+            </label>  -->
+
+              <div *ngIf="slot_tim['slot1'] != 0">
+                <label class="container">8:00 PM ({{slot_tim.slot1}})
+                  <input formControlName="slot" type="radio" value="8 PM" name="slot" id="8 PM">
+                  <br>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+
+              <div *ngIf="slot_tim.slot2 != 0">
+                <label class="container">8:30 PM ({{slot_tim.slot2}})
+                  <input formControlName="slot" type="radio" value="8:30 PM" name="slot" id="8:30 PM">
+                  <br>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+
+              <div *ngIf="slot_tim.slot3 != 0">
+                <label class="container">9 PM ({{slot_tim.slot3}})
+                  <input formControlName="slot" type="radio" value="9 PM" name="slot" id="9 PM">
+                  <br>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+
+              <div *ngIf="slot_tim.slot4 != 0">
+                <label class="container">9:30 PM ({{slot_tim.slot4}})
+                  <input formControlName="slot" type="radio" value="9:30 PM" name="slot" id="9:30 PM">
+                  <br>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+
+              <div class="inc" *ngIf="f['slot'].errors?.['required'] && submitted ">
+                Slot is required.
+              </div>
+
+
+            </fieldset>
+          </form>
+        </div>
+
+      </fieldset>
+
+      <input (click)="Submit()" type="submit" value="Next >>>" />
+
+    </form>
+  </div>
+
+</body>

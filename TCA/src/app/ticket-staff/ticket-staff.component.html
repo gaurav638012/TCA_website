@@ -1,0 +1,38 @@
+<body>
+
+    <div align="center">
+    <h1> Tamil Cultural Association, IIT Bombay</h1>
+    </div>
+    
+    <div align="center">
+        <h2> Tamil Fest 2022 - Tickets</h2>
+    </div>
+        
+    
+    <div class="form-style-5">
+        <form [formGroup]="form" >
+        <fieldset>
+        <p>Choose Subscription Type</p>
+
+        <label class="container">Subscription Mode
+            <input type="radio" name="radio" formControlName="mode" value="subscribe" id = "subscriptionmode" (change) ="switch($event)" > 
+            <br>
+            <body>(By paying for Rs.2500/- with Subscription mode, you will get two free entry pass for Tamil Fest 2022, Freshers Day 2022, Karthigai Deepam 2022 and Pongal Celebration 2023)</body>
+            <span class="checkmark"></span>
+          </label>
+        
+          <label class="container">Only for Tamil Fest 2022
+            <input type="radio" name="radio" formControlName="mode" value="event" id="onlytamilfest" (change) ="switch($event)">
+            <br>
+            <body>(Rs.310/- per person, which includes entry to the Cultural Event, Dinner and Movie Screening)</body>
+            <span class="checkmark"></span>
+          </label>
+
+        </fieldset>
+    
+        <input (click)="Submit()" type="submit" value="Next >>>" />
+        
+        </form>
+    </div>
+    
+    </body>

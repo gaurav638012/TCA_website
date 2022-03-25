@@ -1,0 +1,141 @@
+<!-- <head>
+    <script src=
+    "https://smtpjs.com/v3/smtp.js">
+    </script>
+  
+  <script type="text/javascript">
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "Wrecjet P",
+        Password: "hello@123",
+        To: 'gaurav638012@gmail.com',
+        From: "wreckererode@gmail.com",
+        Subject: "Sending Email using javascript",
+        Body: "Well that was easy!!",
+      })
+        .then(function (message) {
+          alert("mail sent successfully")
+        });
+    }
+  </script>
+</head> -->
+
+<body>
+    <div class = "tca" >
+        <img src = "../../assets/tca_logo.png" width="20%" alt="tca-logo">
+    </div>
+    <div align="center">
+    <h1> Tamil Cultural Association, IIT Bombay</h1>
+    </div>
+    
+    <div align="center">
+        <h2> Tamil Fest 2022 - Tickets</h2>
+    </div>
+        
+    
+    <div class="form-style-5">
+        <div align="center">
+            <h1>STUDENT TICKET</h1>
+        </div>
+        <div align="center">
+            <h3>SUBSCRIPTION : {{user_data.subscribed}}</h3>
+        </div>
+        <div align="center">
+            <p>Student Name: {{user_data.first_name}} {{user_data.last_name}}</p>
+        </div>
+        <div align="center">
+            <p>Mobile No: {{user_data.phone}}</p>
+        </div>
+        <div align="center">
+            <p>Roll No: {{user_data.rollno}}</p>
+        </div>
+        <div align="center">
+            <p>Email: {{user_data.email}}</p>
+        </div>
+        <div align="center">
+            <p>Department: {{user_data.department}}</p>
+        </div>
+        <div align="center">
+            <p>Slot: {{user_data.slot}}</p>
+        </div>
+        <div align="center">
+            <p>No of Coupons: 1+{{user_data.extra_passes}}</p>
+        </div>
+        <div align="center">
+            <p>Amount Paid: {{user_data.total_amount}}</p>
+        </div>
+        <div align="center">
+            <p>Date of Purchase: {{user_data.booking_time}}</p>
+        </div>      
+        
+        
+        
+        
+        
+        
+        <div class = "flex-container">
+
+            <div class = "flex1">
+                <div *ngIf = "user_data.subscribed === 'yes'">
+                    <div class = "small">
+                        <p class = "flex-font">Subscription Fee: 600</p>
+                    </div>
+                </div>
+
+                <div *ngIf = "user_data.subscribed === 'no'">
+                    <div class = "small">
+                        <p class = "flex-font">Entry Fee: 310</p>
+                    </div>
+                </div>
+                
+                <div class="small">
+                    <p class = "flex-font">Contribution: {{user_data.contribution}}</p>
+                </div>
+                <div class = "small">
+                    <p class = "flex-font">Free Passes: 1</p>
+                </div>
+                <div class="small">
+                    <p class = "flex-font">Extra Passes: {{user_data.extra_passes}}</p>
+                </div>
+                
+            </div>
+
+            <div class = "flex2">
+                <canvas #canvas width="100" height="100" id="canvas"></canvas>
+                <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+                <script>
+                    /* JS comes here */
+                    var qr;
+                    (function() {
+                            qr = new QRious({
+                            element: document.getElementById('qr-code'),
+                            size: 200,
+                            value: 'https://studytonight.com'
+                        });
+                    })();
+                    
+                    function generateQRCode() {
+                        var qrtext = document.getElementById("qr-text").value;
+                        document.getElementById("qr-result").innerHTML = "QR code for " + qrtext +":";
+                        alert(qrtext);
+                        qr.set({
+                            foreground: 'black',
+                            size: 200,
+                            value: qrtext
+                        });
+                    }
+                </script> -->
+            </div>
+
+        </div>
+
+        <div align="center" class = "print_button">
+            <input  id ="printbtn" type="button" value="Print this page" onclick="window.print();" >
+        </div>   
+
+    </div>
+
+
+    
+ </body>

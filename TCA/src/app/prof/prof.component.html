@@ -1,0 +1,71 @@
+<body>
+
+    <div align="center">
+    <h1> Tamil Cultural Association, IIT Bombay</h1>
+    </div>
+    
+    <div align="center">
+        <h2> Tamil Fest 2022 - Tickets</h2>
+    </div>
+        
+    
+<div class="form-style-5">
+        <form [formGroup]="form" >
+        <fieldset>
+        <p>User Information</p>
+        <input type="text" formControlName="name" name="name" id = "name" placeholder="Name *" required>
+        <div class = "inc" *ngIf="f['name'].errors?.['required'] && submitted ">
+            Name is required.
+        </div>
+
+        <input type="text" formControlName="mobile" name="mobile" id = "mobile" placeholder="Mobile Number *" required>
+        <div class = "inc" *ngIf="f['mobile'].errors?.['required'] && submitted">
+            Mobile Number is required.
+        </div>
+
+        <input type="text" formControlName="department" name="department" id = "department" placeholder="Department *" required>
+        <div class = "inc" *ngIf="f['department'].errors?.['required'] && submitted">
+            Department is required.
+        </div>
+
+        <input type="email" formControlName="email" name="email" id = "email" placeholder="Email *" required>          
+        <div class = "inc" *ngIf="f['email'].errors?.['required'] && submitted">
+            email is required.
+        </div>
+
+        </fieldset>
+    
+        <input  (click)="Submit()" type="submit" value="Next >>>" />
+        </form>
+    </div>
+    
+    </body>
+
+    <!-- <div>
+ 
+        <form [formGroup]="registerForm">
+
+            <div class="form-group">
+                <input type="text" placeholder="create your username" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div class="required" *ngIf="f.username.errors.required">Username is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" style="font-size:20px;">Email:</label>
+                <input type="email" placeholder="enter your email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div class="required" *ngIf="f.email.errors.required">Email is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" style="font-size:20px;">Password:</label>
+                <input type="password" placeholder="create password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div class="required" *ngIf="f.password.errors.required">Password is required</div>
+                    <div class="required" *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                </div>
+            </div>
+        </form>
+
+    </div> -->

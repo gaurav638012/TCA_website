@@ -1,0 +1,82 @@
+<body>
+
+    <div align="center">
+    <h1> Tamil Cultural Association, IIT Bombay</h1>
+    </div>
+    
+    <div align="center">
+        <h2> Tamil Fest 2022 - Tickets</h2>
+    </div>
+        
+    
+    <div class="form-style-5">
+        <form>
+        <fieldset>
+        <div align="center">
+          <h2>Student Event Mode</h2>
+        <p>Since you have chosen the event model, you will be availing one entry pass that permit only one adult. If you wish to get any additional entry passes, you can get them now by paying Rs.310/- per person </p>
+
+         <br>
+        </div>
+
+        <p><b>Event Fee is Rs.310 </b></p>
+
+        <div class="form-style-5">
+            <form [formGroup]="form" >
+            <fieldset>
+            <p>Contribution if Any Please</p>
+            <input type="text" (change)="trigger_total()" formControlName="contribution" name="contribution" id = "contribution" placeholder = "Contribution (if any)">
+            <p>Additional Passes</p>
+            <input type="text" (change)="trigger_total()" formControlName="additionalpasses" name="additionalpasses" id = "additionalpasses" placeholder = "Additional Passes">
+            
+            <h3>Total Amount: {{total}}</h3>
+            
+            <div *ngIf = "slot_tim.slot1 != 0">
+              <label class="container">8:00 PM ({{slot_tim.slot1}})       
+              <input formControlName="slot"  type="radio" value="8 PM" name="slot" id = "8 PM"> 
+              <br>
+              <span class="checkmark"></span>
+              </label>
+          </div>
+            
+          <div *ngIf = "slot_tim.slot2 != 0">
+            <label class="container">8:30 PM ({{slot_tim.slot2}})
+              <input formControlName="slot" type="radio" value = "8:30 PM" name="slot" id = "8:30 PM">  
+              <br>
+              <span class="checkmark"></span>
+            </label>
+          </div>          
+
+          <div *ngIf = "slot_tim.slot3 != 0">
+            <label class="container">9 PM ({{slot_tim.slot3}})
+              <input formControlName="slot" type="radio" value = "9 PM" name="slot" id = "9 PM">  
+              <br>
+              <span class="checkmark"></span>
+            </label>
+          </div>          
+
+          <div *ngIf = "slot_tim.slot4 != 0">
+            <label class="container">9:30 PM ({{slot_tim.slot4}})
+              <input formControlName="slot" type="radio" value = "9:30 PM" name="slot" id = "9:30 PM">  
+              <br>
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+            <div class = "inc" *ngIf="f['slot'].errors?.['required'] && submitted ">
+              Slot is required.
+            </div>
+
+        
+        </fieldset>
+            </form>
+        </div>
+
+        </fieldset>
+    
+        <input (click)="Submit()" type="submit" value="Pay >>>" />
+        
+        </form>
+    </div>
+    
+    </body>
