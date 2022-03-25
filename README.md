@@ -25,6 +25,7 @@
 - So a new user will firstly have to change key_id and secret_key if they are using different razorpay account. If they want to change text message in razorpay popup go to individual component and there in order call set the text message
 - They should also similarly change backend_base based on what the hosting website leads on to and also change login details if using postgres
 - **NOTE: This was written to support postgres I mean the queries**
+- Note that there are two folders in **gitignore** which is nodemodules folder both in TCA folder and in node-postgres folder. So u will have to install them and also install other dependencies also
 
 
 
