@@ -18,7 +18,7 @@
 
 - The main file is **index.js** which runs express module and responds to various get/post calls from front-end.There is another helper file **tca_model.js** which contains functions that perform sql logic. 
 - Note the database used is **postgres** and the login details are set in index.js. Also the **key_id** and **secret_key** needed for razorpay are set in index.js so set it accordingly
-- There is a file **tca.ddl** which removes existing database and creates three new tables and adds max no of slots to each slot. If needed change it there.Also if u want to have lesser slots set slot value to zero. But having different slots will then involve also changing in front-end also. 
+- There is a file **tca.ddl** which removes existing database and creates a new database namely **tca** and  three new tables and adds max no of slots to each slot. If needed change it there.Also if u want to have lesser slots set slot value to zero. But having different slots will then involve also changing in front-end also. 
 - One table is booking info of **student** and one info is info of **staff** and another table tracks no of slots left. Note that if we want subscribed students list or anything like that we can just query from the database with the fields. Just look into that also
 
 ## OVERALL
