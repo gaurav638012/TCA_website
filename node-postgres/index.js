@@ -5,7 +5,7 @@ const app = express()
 const port = 3001
 
 const tca_model = require('./tca_model')
-
+console.log(process.env.password)
 
 app.use(express.json())
 app.use(function (req, res, next) {

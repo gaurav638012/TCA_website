@@ -7,7 +7,15 @@ const pool = new Pool({
     password: process.env.password,
     port: 25060,
 });
+// pool.connect((e,c,d)=>{
+//     if(e){
+//         throw e
 
+//     }
+//     else{
+//         console.log("ok")
+//     }
+// })
 const query_get_slot = {
     text: `select * from slot_timings`,
 }
