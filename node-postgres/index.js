@@ -1,6 +1,6 @@
 const express = require('express')
 const alert = require('alert'); 
-
+require("dotenv").config();
 const app = express()
 const port = 3001
 
@@ -101,8 +101,8 @@ app.post('/sendmail', (req, res) => {
 const Razorpay = require('razorpay'); 
 const razorpayInstance = new Razorpay({
 
-    key_id: "rzp_live_YQ0GSqCCHsyUfO",
-    key_secret: "C6tlxOqT5RbLrcC4nmOfr9qv"
+    key_id: process.env.key_id,
+    key_secret: process.env.key_secret
 
 });
 
