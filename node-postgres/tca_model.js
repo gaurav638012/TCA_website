@@ -1,11 +1,11 @@
 const fs = require('fs');
 const Pool = require('pg').Pool
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'tca',
-    password: 'gaurav@2001',
-    port: 5432,
+    user: 'doadmin',
+    host: process.env.host,
+    database: 'defaultdb',
+    password: process.env.password,
+    port: 25060,
 });
 
 const query_get_slot = {
