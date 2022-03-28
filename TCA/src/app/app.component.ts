@@ -11,6 +11,7 @@ export class AppComponent {
 
 export class GlobalConstants {
   public static key_id: string = "rzp_live_YQ0GSqCCHsyUfO";
+  public static backend_base: string = "http://localhost:3001"
     
   public static secret_key: string = "C6tlxOqT5RbLrcC4nmOfr9qv";
 
