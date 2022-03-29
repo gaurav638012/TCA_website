@@ -18,6 +18,7 @@ app.use(function (req, res, next) {
 
 
 app.get('/get_slot', (req, res) => {
+    
     tca_model.get_slot()
     .then(response => {
 
@@ -25,7 +26,7 @@ app.get('/get_slot', (req, res) => {
       res.status(200).send(response.rows);
     })
     .catch(error => {
-      res.status(500).send(error);
+      res.status(500).send(process.env);
     })
 })
 
