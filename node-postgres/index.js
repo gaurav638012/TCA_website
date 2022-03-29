@@ -26,7 +26,7 @@ app.get('/get_slot', (req, res) => {
       res.status(200).send(response.rows);
     })
     .catch(error => {
-      res.status(500).send(process.env);
+      res.status(500).send(error);
     })
 })
 
