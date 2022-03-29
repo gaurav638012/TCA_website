@@ -6,6 +6,7 @@ const pool = new Pool({
     database: 'defaultdb',
     password: process.env.password,
     port: 25060,
+    ssl: true
 });
 // pool.connect((e,c,d)=>{
 //     if(e){
