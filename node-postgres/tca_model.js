@@ -6,7 +6,9 @@ const pool = new Pool({
     database: 'defaultdb',
     password: process.env.password,
     port: 25060,
-    ssl: true
+    ssl: {
+        ca: fs.readFileSync(__dirname+'/ca-certificate.crt'),
+    }
 });
 // pool.connect((e,c,d)=>{
 //     if(e){
