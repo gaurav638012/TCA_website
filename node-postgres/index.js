@@ -112,7 +112,7 @@ const razorpayInstance = new Razorpay({
 
 async function payment_handle(req,res){
 
-  //console.log("reached post",req.body);
+  console.log("reached post",req.body);
   const {amount,currency}  = req.body;
   
  // const payment_capture = 1; 
@@ -137,6 +137,7 @@ async function payment_handle(req,res){
     //make_checkout(order);
   }
   catch(error){
+    console.log("payment failed due to xyz")
     console.log(error);
   }
  
