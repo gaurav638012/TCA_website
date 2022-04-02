@@ -73,8 +73,8 @@ export class SubscriptionComponent implements OnInit {
     
     var random_token = Math.random().toString(28).substring(2);
    // console.log(random_token)
-    this.Pay(this.total,random_token);
-    //this.Book(random_token);
+    //this.Pay(this.total,random_token);
+    this.Book(random_token);
     
   }
 
