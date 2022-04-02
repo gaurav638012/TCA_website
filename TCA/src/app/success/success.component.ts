@@ -25,7 +25,7 @@ export class SuccessComponent implements OnInit {
     if(org_txt==""){
       window.alert("incorrect access");
       //console.log("step 2 Sf");
-      console.log()
+      
       this.router.navigate(['/'+GlobalConstants.student_form_url_no]);
     }
     //console.log("step 3 S");

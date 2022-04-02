@@ -18,7 +18,7 @@ declare var Razorpay:any;
 
 export class SubscriptionComponent implements OnInit {
 
-  base_cost = 6;
+  base_cost = 600;
   event_cost = 310;
   total = this.base_cost;
   submitted = false;
@@ -65,13 +65,14 @@ export class SubscriptionComponent implements OnInit {
   }
 
   Submit() {
-
+   // window.alert("hello1")
     this.submitted = true;
     if (this.form.invalid) {
       return;
     }
     
     var random_token = Math.random().toString(28).substring(2);
+   // console.log(random_token)
     this.Pay(this.total,random_token);
     //this.Book(random_token);
     
@@ -114,7 +115,7 @@ export class SubscriptionComponent implements OnInit {
       'subscribed': 'yes', 'total_amount': this.total.toString(), 'contribution': this.f['contribution'].value,
       'extra_passes': this.f['additionalpasses'].value, 'slot': this.f['slot'].value, 'booking_time': this.get_time(),
     }
-
+    console.log("reached book first")
     this.service.book_ticket(info)
       .subscribe(data => {
         this.service.book_slot(this.f['slot'].value).subscribe(data =>{          
@@ -163,6 +164,7 @@ export class SubscriptionComponent implements OnInit {
         this.Checkout(data,random_token)
       },
       error=>{
+        console.log("order failed this is bad");
         this.Failure();
         
       }
@@ -194,8 +196,8 @@ export class SubscriptionComponent implements OnInit {
         console.log(response.error.source);    
         console.log(response.error.step);    
         console.log(response.error.reason);    
-        //console.log(response.error.metadata.order_id);    
-        //console.log(response.error.metadata.payment_id);
+        console.log(response.error.metadata.order_id);    
+        console.log(response.error.metadata.payment_id);
         
     });
       rzp.open();

@@ -33,7 +33,8 @@ export class ConnectService {
     return this.http.post(GlobalConstants.backend_base+'/sendmail', body);
   }
   makePayment(body:any){
-    //console.log('starting to make an order to razorpay');
-    return this.http.post(GlobalConstants.backend_base+'makePayment', body);
+    console.log('starting to make an order to razorpay');
+   // console.log(body);
+    return this.http.post(GlobalConstants.backend_base+'/makePayment', body);
   }
 }

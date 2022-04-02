@@ -1,24 +1,31 @@
 const fs = require('fs');
 const Pool = require('pg').Pool
+// const pool = new Pool({
+//     user: 'doadmin',
+//     host: process.env.host,
+//     database: 'defaultdb',
+//     password: process.env.password,
+//     port: 25060,
+//     ssl: {
+//         ca: fs.readFileSync(__dirname+'/ca-certificate.crt'),
+//     }
+// });
 const pool = new Pool({
-    user: 'doadmin',
-    host: process.env.host,
-    database: 'defaultdb',
-    password: process.env.password,
-    port: 25060,
-    ssl: {
-        ca: fs.readFileSync(__dirname+'/ca-certificate.crt'),
-    }
+    user: 'postgres',
+    host: 'localhost',
+    database: 'tca',
+    password: 'gaurav@2001',
+    port: 5432,
 });
-// pool.connect((e,c,d)=>{
-//     if(e){
-//         throw e
+pool.connect((e,c,d)=>{
+    if(e){
+        throw e
 
-//     }
-//     else{
-//         console.log("ok")
-//     }
-// })
+    }
+    else{
+        console.log("ok")
+    }
+})
 const query_get_slot = {
     text: `select * from slot_timings`,
 }

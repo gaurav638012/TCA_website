@@ -1,11 +1,12 @@
 const express = require('express')
+const path = require('path')
 const alert = require('alert'); 
 require("dotenv").config();
 const app = express()
 const port = 3001
-
+app.use(express.static('public'))
 const tca_model = require('./tca_model')
-console.log(process.env.password)
+//console.log(process.env.password)
 
 app.use(express.json())
 app.use(function (req, res, next) {
