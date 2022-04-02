@@ -13,8 +13,10 @@ import { SuccessStaffComponent } from './success-staff/success-staff.component';
 import { FailureStaffComponent } from './failure-staff/failure-staff.component';
 import { EventStaffComponent } from './event-staff/event-staff.component';
 import { GlobalConstants } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  
   {path: GlobalConstants.student_form_url_no,component: UserComponent},
   {path: GlobalConstants.staff_form_url_no,component: ProfComponent},
   {path: GlobalConstants.staff_ticket_url_no,component:TicketStaffComponent},
@@ -27,6 +29,7 @@ const routes: Routes = [
   {path:"failure_staff/:id",component:FailureStaffComponent},
   {path:GlobalConstants.student_event_url_no,component:EventComponent},
   {path:GlobalConstants.staff_event_url_no,component:EventStaffComponent},
+  {path:"**",component:HomeComponent}
   // {path:"failure",component:FailureComponent},
   // {path:"success",component:SuccessComponent},  
   
