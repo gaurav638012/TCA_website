@@ -1,0 +1,4 @@
+TCA/node_modules/*
+node-postgres/node_modules/*
+node-postgres/.env
+front-end/node_modules/*
