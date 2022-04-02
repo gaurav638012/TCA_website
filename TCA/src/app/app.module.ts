@@ -17,6 +17,7 @@ import { EventStaffComponent } from './event-staff/event-staff.component';
 import { SubsricptionStaffComponent } from './subsricption-staff/subsricption-staff.component';
 import { FailureStaffComponent } from './failure-staff/failure-staff.component';
 import { SuccessStaffComponent } from './success-staff/success-staff.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SuccessStaffComponent } from './success-staff/success-staff.component';
     EventStaffComponent,
     SubsricptionStaffComponent,
     FailureStaffComponent,
-    SuccessStaffComponent
+    SuccessStaffComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

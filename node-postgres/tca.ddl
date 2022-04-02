@@ -40,4 +40,4 @@ CREATE TABLE event_booking_staff(
     booking_time text
 );
 
-insert into slot_timings values(70,70,70,70);
+insert into slot_timings values(70,70,80,80);

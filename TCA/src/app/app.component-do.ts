@@ -10,10 +10,10 @@ export class AppComponent {
 }
 
 export class GlobalConstants {
-  public static key_id: string = "rzp_live_YQ0GSqCCHsyUfO";
+  public static key_id: string = "rzp_live_ftSZvpFtRuiAtx";
   public static backend_base: string = "https://tca-website-ki3sf.ondigitalocean.app"
     
-  public static secret_key: string = "C6tlxOqT5RbLrcC4nmOfr9qv";
+  public static secret_key: string = "P3MjdtSoUNFMEUPDvLyQFlMa";
 
   public static secret_hash: string = 'tca application gp';
 
