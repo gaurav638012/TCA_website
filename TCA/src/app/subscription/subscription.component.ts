@@ -18,7 +18,7 @@ declare var Razorpay:any;
 
 export class SubscriptionComponent implements OnInit {
 
-  base_cost = 600;
+  base_cost = 6;
   event_cost = 310;
   total = this.base_cost;
   submitted = false;
