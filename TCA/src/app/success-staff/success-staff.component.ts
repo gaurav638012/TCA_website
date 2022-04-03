@@ -32,7 +32,7 @@ export class SuccessStaffComponent implements OnInit {
         //console.log(this.user_data);
       })
     //console.log(this.activatedRoute.snapshot.url.join('/'));
-    this.make_QR(this.activatedRoute.snapshot.url.join('/'));
+    this.make_QR(document.URL);
   }
 
   make_QR(encoder:any){

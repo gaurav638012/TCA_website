@@ -36,6 +36,7 @@ export class SuccessComponent implements OnInit {
         //console.log(this.user_data);
       })
     //console.log(this.activatedRoute.snapshot.url.join('/'));
+    
     this.make_QR(document.URL);
     //console.log(this.gen_QR(this.encoder));
     //console.log(this.gen_QR(decryptText));
