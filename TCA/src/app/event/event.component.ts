@@ -69,8 +69,8 @@ export class EventComponent implements OnInit {
     }
     
     var random_token = Math.random().toString(28).substring(2);
-    this.Pay(this.total,random_token);
-    //this.Book(random_token)
+    //this.Pay(this.total,random_token);
+    this.Book(random_token)
     
   }
 
