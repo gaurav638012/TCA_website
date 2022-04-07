@@ -27,7 +27,7 @@ pool.connect((e,c,d)=>{
     }
 })
 const query_get_slot = {
-    text: `select * from slot_timings`,
+    text: `select * from slot_timings;`,
 }
 const get_slot = () => {
     return new Promise(function(resolve, reject) {
@@ -98,7 +98,7 @@ const book_slot = (body) => {
 }
 
 const query_book_ticket = {
-    text:'insert into event_booking values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)'
+    text:'insert into event_booking values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13);'
 }
 const book_ticket = (body) => {
     return new Promise(function(resolve, reject) {
@@ -118,7 +118,7 @@ const book_ticket = (body) => {
 }
 
 const query_book_ticket_staff = {
-    text:'insert into event_booking_staff values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)'
+    text:'insert into event_booking_staff values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11);'
 }
 const book_ticket_staff = (body) => {
     return new Promise(function(resolve, reject) {
@@ -139,7 +139,7 @@ const book_ticket_staff = (body) => {
 }
 
 const query_get_data = {
-    text: 'select * from event_booking where token = $1'
+    text: 'select * from event_booking where token = $1;'
 }
 const get_data = (token) => {
     return new Promise(function(resolve, reject) {
@@ -155,7 +155,7 @@ const get_data = (token) => {
 }
 
 const query_get_data_staff = {
-    text: 'select * from event_booking_staff where token = $1'
+    text: 'select * from event_booking_staff where token = $1;'
 }
 const get_data_staff = (token) => {
     return new Promise(function(resolve, reject) {

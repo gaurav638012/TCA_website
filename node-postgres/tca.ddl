@@ -5,9 +5,9 @@ DROP TABLE if exists event_booking_staff;
 --Team id and name
 CREATE TABLE slot_timings (
     slot1 INT CHECK (slot1>=0),
-    slot2 INT CHECK (slot1>=0),
-    slot3 INT CHECK (slot1>=0),
-    slot4 INT CHECK (slot1>=0)
+    slot2 INT CHECK (slot2>=0),
+    slot3 INT CHECK (slot3>=0),
+    slot4 INT CHECK (slot4>=0),
 );
 
 CREATE TABLE event_booking(
